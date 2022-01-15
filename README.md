@@ -1,0 +1,2 @@
+# Discord bot - Pycord tutorial
+ 
