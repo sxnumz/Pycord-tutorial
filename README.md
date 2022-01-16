@@ -1,6 +1,6 @@
 ## Pycord Tutorial
 
-Discord bot tutorial 
+Discord bot tutorial by stacia
 written using Python and the [Pycord](https://github.com/Pycord-Development/pycord) library <br>
 
 Click on the branch-selector button located here:
