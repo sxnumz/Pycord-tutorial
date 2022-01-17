@@ -8,7 +8,22 @@ class example(commands.Cog):
 
     @slash_command(guild_ids=[SERVER_ID])
     async def hello_slash(self, ctx):
-        await ctx.respond('hello slash')
+        embed = discord.Embed(color=0xB983FF, timestamp=discord.utils.utcnow())
+
+        embed.title = 'Stacia_bot'
+        embed.description = 'tutorial pycord\nep1.5'
+        embed.add_field(name='field1', value='text', inline=True)
+        embed.add_field(name='field2', value='text', inline=True)
+        embed.add_field(name='field3', value='text', inline=False)
+
+        embed.set_image(url='https://i.imgur.com/iYctNz2.png')
+        embed.set_thumbnail(url='https://i.imgur.com/iYctNz2.png')
+
+        embed.set_footer(text='footer', icon_url='https://i.imgur.com/iYctNz2.png')
+
+        embed.set_author(name='author', icon_url='https://i.imgur.com/iYctNz2.png', url='https://i.imgur.com/iYctNz2.png')
+
+        await ctx.respond(embed=embed)
 
     @commands.command()
     async def hello(self, ctx):
