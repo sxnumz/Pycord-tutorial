@@ -23,7 +23,7 @@ class slash_example(commands.Cog):
     async def member(
         self,
         ctx,
-        member: Option(discord.User, 'Spectify Member')
+        member: Option(discord.Member, 'Spectify Member')
     ):  
         # Member = discord.Member
         # User =  discord.User
