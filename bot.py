@@ -16,10 +16,11 @@ bot = stacia_bot(owner_id=OWNER_ID, case_insensitive=True)
 @bot.event
 async def on_ready():
     print(f'{bot.user} is Ready')
+    print('\nCogs Loaded\n----------\n')
 
 if __name__ == "__main__":
     for file in os.listdir('./cogs'):
-        if file.endswith('.py'):
+        if file.endswith('.py') and not file.startswith('_'):
             bot.load_extension(f'cogs.{file[:-3]}')
 
     bot.run(bot.token)

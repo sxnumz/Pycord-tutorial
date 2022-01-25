@@ -5,6 +5,10 @@ from discord.commands import slash_command, Option
 class slash_example(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+    
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print(self.__class__.__name__)
 
     @slash_command(description="My infomation", guild_ids=[SERVER_ID])
     async def myinfo(
