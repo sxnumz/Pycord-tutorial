@@ -6,11 +6,11 @@ class example(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @slash_command(guild_ids=[SERVER_ID])
+    @slash_command(guild_ids=[986665524924661850])
     async def hello_slash(self, ctx):
         embed = discord.Embed(color=0xB983FF, timestamp=discord.utils.utcnow())
 
-        embed.title = 'Stacia_bot'
+        embed.title = 'Script'
         embed.description = 'tutorial pycord\nep1.5'
         embed.add_field(name='field1', value='text', inline=True)
         embed.add_field(name='field2', value='text', inline=True)
